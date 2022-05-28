@@ -15,7 +15,7 @@ async def tpgw_read_coursecat():
 
 @app.get("/tpgateway/coursesubcat/{cat_id}")
 async def tpgw_read_coursesubcat(cat_id: int):
-    if cat_id < 10:
+    if cat_id > 1:
         return {"cat_id": cat_id}
     else:
         return {"message": "bad catid"}
